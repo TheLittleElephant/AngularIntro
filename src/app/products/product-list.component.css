@@ -1,0 +1,17 @@
+.panel.panel-primary {
+    border-color: #EF6C00;
+}
+.panel.panel-primary > .panel-heading {
+    color: white;
+    background-color:#EF6C00;
+    border-color: #EF6C00;
+}
+  
+thead {
+    color: #EF6C00;
+}
+
+.btn.btn-primary {
+    background-color:#EF6C00;
+    border-color: #EF6C00;
+}

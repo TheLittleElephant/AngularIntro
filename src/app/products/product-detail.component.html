@@ -1,0 +1,24 @@
+<div class="panel panel-primary" *ngIf="product">
+  <div class="panel-heading">{{ pageTitle }} : {{ product.productName }}</div>
+  <div class="panel-body">
+      <div class="row">
+          <div class="col-md-4">
+              <img src="{{ product.imageUrl }}" title="{{ product.productName }}" width="210" height="210">
+          </div>
+          <div class="col-md-8">
+              <h4>{{  product.productName }}</h4>
+              <b>Prix : </b> {{ product.price | currency:'EUR':true:'1.2-2' }} <br>
+              <b>Disponibilité : </b> {{ product.releaseDate }} <br>
+              <b>Description : </b> <br>
+              {{ product.description }}
+              <br>
+              <b>Note : </b> <pm-star [rating]="product.starRating" title="product.starRating"></pm-star>
+          </div>
+      </div>
+  </div>
+  <div class="panel-footer">
+      <a type="button" class="btn btn-primary" (click)="onBack()">
+          <i class="glyphicon glyphicon-chevron-left"></i> Revenir à la liste des produits
+      </a>
+  </div>
+</div>

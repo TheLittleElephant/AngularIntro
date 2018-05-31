@@ -1,0 +1,52 @@
+[
+    {
+        "productId": 1,
+        "productName": "Lasagnes à la bolognaise",
+        "productCode": "LBO-0011",
+        "releaseDate": "19 mars 2018",
+        "description": "Lasagnes à la bolognaise Panzani avec de la viande de boeuf 100% française sans conservateurs ni arômes artificiels",
+        "price": 7.95,
+        "starRating": 3.2,
+        "imageUrl": "http://www.panzani.fr/wp-content/uploads/2015/12/lasagnes_aux_legumes_du_soleil_319x348.jpg"
+    },
+    {
+        "productId": 2,
+        "productName": "Tzatziki",
+        "productCode": "TZA-0023",
+        "releaseDate": "30 mai 2018",
+        "description": "Toutes les saveurs de la Grèce dans ce tzatziki aux concombres issus de l'agriculture biologique",
+        "price": 3.45,
+        "starRating": 4.2,
+        "imageUrl": "https://image.afcdn.com/recipe/20161116/643_w600.jpg"
+    },
+    {
+        "productId": 8,
+        "productName": "Saumon fumé",
+        "productCode": "SAF-0022",
+        "releaseDate": "22 octobre 2018",
+        "description": "Saumon fumé Delpeyrat fumé au bois de hêtre issu de forêts gérées durablement, sans conservateurs, sans arômes artificiels et sans colorants",
+        "price": 11.55,
+        "starRating": 3.7,
+        "imageUrl": "https://delpeyrat-548724.c.cdn77.org/wp-content/uploads/2014/04/coeur-de-saumon_1.png"
+    },
+    {
+        "productId": 10,
+        "productName": "Pizza",
+        "productCode": "PZZ-0042",
+        "releaseDate": "3 juin 2018",
+        "description": "Toutes les saveurs de l'Italie dans cette pizza cuite au feu de bois, avec des ingrédients de qualité sélectionnés pour une expérience de dégustation unique",
+        "price": 5.50,
+        "starRating": 4.6,
+        "imageUrl": "https://statics.monoprix.fr/course/g_1739900_pizza-vegetale.jpg?t=20170909033247"
+    },
+    {
+        "productId": 11,
+        "productName": "Moelleux au chocolat",
+        "productCode": "MCH-0021",
+        "releaseDate": "3 juin 2018",
+        "description": "Un moelleux au chocolat qui ravira tous les amateurs de chocolat, sans conservateurs ni arômes artificiels. Fabriqué en France.",
+        "price": 2.20,
+        "starRating": 4.6,
+        "imageUrl": "https://static.cuisineaz.com/610x610/i7118-moelleux-au-chocolat-rapide.jpg"
+    }
+]
