@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
+import { ProductGuardService } from './products/product-guard.service';
+import { ErrorPageComponent } from './shared/error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { RouterModule } from '@angular/router';
     ConvertToSpacesPipe,
     StarComponent,
     ProductDetailComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
@@ -29,8 +32,12 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'products', component: ProductListComponent },
-      { path: 'products/:id', component: ProductDetailComponent },
+      { path: 'products/:id',
+        canActivate: [ ProductGuardService ],
+        component: ProductDetailComponent
+      },
       { path: 'home', component: WelcomeComponent },
+      { path: 'error', component: ErrorPageComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', redirectTo: 'home', pathMatch: 'full' }
     ])
@@ -40,7 +47,8 @@ import { RouterModule } from '@angular/router';
       useValue: 'fr-FR'
       // Définit la locale en français
      },
-     ProductService
+     ProductService,
+     ProductGuardService
   ],
   bootstrap: [AppComponent]
 })

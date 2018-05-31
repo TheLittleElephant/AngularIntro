@@ -10,16 +10,21 @@ import { ProductService} from './product.service';
 export class ProductDetailComponent implements OnInit {
   pageTitle: string = 'Détail du produit';
   product: IProduct;
+  errorMessage: string;
 
   constructor(private _router: Router, private _route: ActivatedRoute, private _productService: ProductService) { }
 
   ngOnInit() {
     const id: number = +this._route.snapshot.paramMap.get('id');
-    this._productService.getProducts()
-        .subscribe(products => {
-            const allProducts = products;
-            this.product = allProducts.find(product => product.productId === id);
-        });
+    this.getProduct(id);
+  }
+
+  getProduct(id: number) {
+    this._productService.getProduct(id)
+        .subscribe(
+            product => this.product = product,
+            error => this.errorMessage = <any>error
+        );
   }
 
   onBack(): void {

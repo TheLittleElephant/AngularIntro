@@ -10,7 +10,7 @@
               <b>Prix : </b> {{ product.price | currency:'EUR':true:'1.2-2' }} <br>
               <b>Disponibilité : </b> {{ product.releaseDate }} <br>
               <b>Description : </b> <br>
-              {{ product.description }}
+                 {{ product.description }}
               <br>
               <b>Note : </b> <pm-star [rating]="product.starRating" title="product.starRating"></pm-star>
           </div>
